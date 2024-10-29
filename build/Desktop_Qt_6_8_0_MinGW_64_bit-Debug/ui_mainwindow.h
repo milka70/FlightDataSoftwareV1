@@ -20,6 +20,7 @@
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 #include "qfi/qfi_ASI.h"
@@ -44,17 +45,25 @@ public:
     QFrame *line_2;
     QTabWidget *tabWidget;
     QWidget *tab_3;
+    QGridLayout *gridLayout;
+    QSpacerItem *horizontalSpacer_7;
     QWidget *widget_3;
     QGridLayout *gridLayout_2;
-    QLabel *label_2;
-    QLabel *label;
-    QSpacerItem *horizontalSpacer_5;
+    QDoubleSpinBox *I_Value;
+    QDoubleSpinBox *D_Value;
     QLabel *label_3;
-    QSpacerItem *horizontalSpacer_4;
-    QDoubleSpinBox *doubleSpinBox_2;
-    QDoubleSpinBox *doubleSpinBox;
-    QDoubleSpinBox *doubleSpinBox_3;
+    QLabel *label;
+    QDoubleSpinBox *P_Value;
+    QLabel *label_2;
+    QSpacerItem *verticalSpacer_2;
+    QWidget *widget_4;
+    QLabel *label_6;
+    QLabel *label_7;
+    QTextEdit *textEdit;
+    QSpacerItem *verticalSpacer;
+    QSpacerItem *horizontalSpacer_6;
     QWidget *tab_4;
+    QWidget *tab;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -121,56 +130,106 @@ public:
         line_2->setFrameShadow(QFrame::Shadow::Sunken);
         tabWidget = new QTabWidget(widget);
         tabWidget->setObjectName("tabWidget");
-        tabWidget->setGeometry(QRect(40, 10, 641, 671));
+        tabWidget->setGeometry(QRect(40, 10, 671, 691));
+        QFont font;
+        font.setFamilies({QString::fromUtf8("Source Code Pro Medium")});
+        font.setPointSize(11);
+        tabWidget->setFont(font);
         tab_3 = new QWidget();
         tab_3->setObjectName("tab_3");
+        gridLayout = new QGridLayout(tab_3);
+        gridLayout->setObjectName("gridLayout");
+        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer_7, 0, 2, 1, 1);
+
         widget_3 = new QWidget(tab_3);
         widget_3->setObjectName("widget_3");
-        widget_3->setGeometry(QRect(40, 30, 151, 221));
         gridLayout_2 = new QGridLayout(widget_3);
         gridLayout_2->setObjectName("gridLayout_2");
-        label_2 = new QLabel(widget_3);
-        label_2->setObjectName("label_2");
+        I_Value = new QDoubleSpinBox(widget_3);
+        I_Value->setObjectName("I_Value");
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Source Code Pro")});
+        font1.setPointSize(11);
+        I_Value->setFont(font1);
 
-        gridLayout_2->addWidget(label_2, 3, 0, 1, 1);
+        gridLayout_2->addWidget(I_Value, 2, 1, 1, 1);
 
-        label = new QLabel(widget_3);
-        label->setObjectName("label");
+        D_Value = new QDoubleSpinBox(widget_3);
+        D_Value->setObjectName("D_Value");
+        D_Value->setFont(font1);
 
-        gridLayout_2->addWidget(label, 0, 0, 1, 1);
-
-        horizontalSpacer_5 = new QSpacerItem(70, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        gridLayout_2->addItem(horizontalSpacer_5, 2, 0, 1, 1);
+        gridLayout_2->addWidget(D_Value, 4, 1, 1, 1);
 
         label_3 = new QLabel(widget_3);
         label_3->setObjectName("label_3");
+        label_3->setFont(font1);
 
-        gridLayout_2->addWidget(label_3, 6, 0, 1, 1);
+        gridLayout_2->addWidget(label_3, 4, 0, 1, 1);
 
-        horizontalSpacer_4 = new QSpacerItem(70, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+        label = new QLabel(widget_3);
+        label->setObjectName("label");
+        label->setFont(font1);
 
-        gridLayout_2->addItem(horizontalSpacer_4, 5, 0, 1, 1);
+        gridLayout_2->addWidget(label, 0, 0, 1, 1);
 
-        doubleSpinBox_2 = new QDoubleSpinBox(widget_3);
-        doubleSpinBox_2->setObjectName("doubleSpinBox_2");
+        P_Value = new QDoubleSpinBox(widget_3);
+        P_Value->setObjectName("P_Value");
+        P_Value->setFont(font1);
+        P_Value->setMinimum(0.000000000000000);
+        P_Value->setMaximum(10099999.000000000000000);
 
-        gridLayout_2->addWidget(doubleSpinBox_2, 3, 1, 1, 1);
+        gridLayout_2->addWidget(P_Value, 0, 1, 1, 1);
 
-        doubleSpinBox = new QDoubleSpinBox(widget_3);
-        doubleSpinBox->setObjectName("doubleSpinBox");
+        label_2 = new QLabel(widget_3);
+        label_2->setObjectName("label_2");
+        label_2->setFont(font1);
 
-        gridLayout_2->addWidget(doubleSpinBox, 0, 1, 1, 1);
+        gridLayout_2->addWidget(label_2, 2, 0, 1, 1);
 
-        doubleSpinBox_3 = new QDoubleSpinBox(widget_3);
-        doubleSpinBox_3->setObjectName("doubleSpinBox_3");
 
-        gridLayout_2->addWidget(doubleSpinBox_3, 6, 1, 1, 1);
+        gridLayout->addWidget(widget_3, 1, 0, 1, 1);
+
+        verticalSpacer_2 = new QSpacerItem(20, 582, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        gridLayout->addItem(verticalSpacer_2, 1, 1, 1, 1);
+
+        widget_4 = new QWidget(tab_3);
+        widget_4->setObjectName("widget_4");
+        label_6 = new QLabel(widget_4);
+        label_6->setObjectName("label_6");
+        label_6->setGeometry(QRect(30, 110, 49, 16));
+        label_7 = new QLabel(widget_4);
+        label_7->setObjectName("label_7");
+        label_7->setGeometry(QRect(50, 10, 121, 16));
+        textEdit = new QTextEdit(widget_4);
+        textEdit->setObjectName("textEdit");
+        textEdit->setGeometry(QRect(50, 40, 331, 491));
+        textEdit->setFont(font1);
+        textEdit->setAutoFillBackground(false);
+        textEdit->setVerticalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAlwaysOff);
+        textEdit->setHorizontalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAlwaysOff);
+        textEdit->setReadOnly(true);
+        textEdit->setTextInteractionFlags(Qt::TextInteractionFlag::NoTextInteraction);
+
+        gridLayout->addWidget(widget_4, 1, 2, 1, 1);
+
+        verticalSpacer = new QSpacerItem(20, 582, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        gridLayout->addItem(verticalSpacer, 1, 3, 1, 1);
+
+        horizontalSpacer_6 = new QSpacerItem(408, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer_6, 2, 2, 1, 1);
 
         tabWidget->addTab(tab_3, QString());
         tab_4 = new QWidget();
         tab_4->setObjectName("tab_4");
         tabWidget->addTab(tab_4, QString());
+        tab = new QWidget();
+        tab->setObjectName("tab");
+        tabWidget->addTab(tab, QString());
 
         verticalLayout->addWidget(widget);
 
@@ -190,11 +249,15 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Altas Flight", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "I:", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "P:", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "D:", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("MainWindow", "Tab 1", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_4), QCoreApplication::translate("MainWindow", "Tab 2", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "P:", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "I:", nullptr));
+        label_6->setText(QString());
+        label_7->setText(QCoreApplication::translate("MainWindow", "PID Tuning:", nullptr));
+        textEdit->setDocumentTitle(QString());
+        tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("MainWindow", "Setting", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_4), QCoreApplication::translate("MainWindow", "Servo", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Remote Controll", nullptr));
     } // retranslateUi
 
 };

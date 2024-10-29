@@ -1,3 +1,4 @@
+debug/Functions.o
 debug/main.o
 debug/mainwindow.o
 debug/qfi_Colors.o

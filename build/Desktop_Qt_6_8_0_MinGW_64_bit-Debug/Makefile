@@ -391,7 +391,6 @@ Makefile: ../../MultiwiiCloneCpp.pro E:/Qt/6.8.0/mingw_64/mkspecs/win32-g++/qmak
 		E:/Qt/6.8.0/mingw_64/mkspecs/features/qt_config.prf \
 		E:/Qt/6.8.0/mingw_64/mkspecs/win32-g++/qmake.conf \
 		E:/Qt/6.8.0/mingw_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		E:/Qt/6.8.0/mingw_64/mkspecs/features/exclusive_builds.prf \
 		E:/Qt/6.8.0/mingw_64/mkspecs/features/toolchain.prf \
 		E:/Qt/6.8.0/mingw_64/mkspecs/features/default_pre.prf \
@@ -422,8 +421,10 @@ Makefile: ../../MultiwiiCloneCpp.pro E:/Qt/6.8.0/mingw_64/mkspecs/win32-g++/qmak
 		E:/Qt/6.8.0/mingw_64/lib/Qt6Svg.prl \
 		E:/Qt/6.8.0/mingw_64/lib/Qt6Widgets.prl \
 		E:/Qt/6.8.0/mingw_64/lib/Qt6Gui.prl \
+		E:/Qt/6.8.0/mingw_64/lib/Qt6SerialPort.prl \
 		E:/Qt/6.8.0/mingw_64/lib/Qt6Core.prl \
 		E:/Qt/6.8.0/mingw_64/lib/Qt6EntryPoint.prl \
+		.qmake.stash \
 		E:/Qt/6.8.0/mingw_64/mkspecs/features/build_pass.prf \
 		../../qfi/qfi.qrc
 	$(QMAKE) -o Makefile ..\..\MultiwiiCloneCpp.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -748,7 +749,6 @@ E:/Qt/6.8.0/mingw_64/mkspecs/features/qt_functions.prf:
 E:/Qt/6.8.0/mingw_64/mkspecs/features/qt_config.prf:
 E:/Qt/6.8.0/mingw_64/mkspecs/win32-g++/qmake.conf:
 E:/Qt/6.8.0/mingw_64/mkspecs/features/spec_post.prf:
-.qmake.stash:
 E:/Qt/6.8.0/mingw_64/mkspecs/features/exclusive_builds.prf:
 E:/Qt/6.8.0/mingw_64/mkspecs/features/toolchain.prf:
 E:/Qt/6.8.0/mingw_64/mkspecs/features/default_pre.prf:
@@ -779,8 +779,10 @@ E:/Qt/6.8.0/mingw_64/lib/Qt6SvgWidgets.prl:
 E:/Qt/6.8.0/mingw_64/lib/Qt6Svg.prl:
 E:/Qt/6.8.0/mingw_64/lib/Qt6Widgets.prl:
 E:/Qt/6.8.0/mingw_64/lib/Qt6Gui.prl:
+E:/Qt/6.8.0/mingw_64/lib/Qt6SerialPort.prl:
 E:/Qt/6.8.0/mingw_64/lib/Qt6Core.prl:
 E:/Qt/6.8.0/mingw_64/lib/Qt6EntryPoint.prl:
+.qmake.stash:
 E:/Qt/6.8.0/mingw_64/mkspecs/features/build_pass.prf:
 ../../qfi/qfi.qrc:
 qmake: FORCE
